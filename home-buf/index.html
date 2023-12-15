@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <title>mycontents</title>
+
+    <script language="javascript" type="text/javascript">
+        
+        function OnLinkClick() {
+            var target = event.target;
+            var url = target.dataset.url;
+            var iframe = document.getElementById('mframe');
+            var iframed = (iframe.contentWindow || iframe.contentDocument);
+            iframed.location.replace(url);
+            return false;
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side-menu-zone">
+
+            <div class="menuTitle">Menu</div>
+
+            <div class="menu">
+
+                <div class="listTitle">マイクラ関連</div>
+                <ul>
+                    <li><a class="plink" data-url="contents/mc/mctrpg/mctrpg.html" href="javascript:void(0);" onclick="OnLinkClick();">MCTRPGManager</a></li>
+                </ul>
+
+                <div class="listTitle">3Dモデル</div>
+                <ul>
+                    <li><a class="plink" data-url="index.html" href="javascript:void(0);" onclick="OnLinkClick();">Example</a></li>
+                </ul>
+
+                <div class="listTitle">その他</div>
+                <ul>
+                    <li><a class="plink" data-url="index.html" href="javascript:void(0);" onclick="OnLinkClick();">product</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="login_box">
+
+                <script>
+                    function extra() {
+                        var logmsg = document.getElementById('loginMsg');
+                        var iframe = document.getElementById('mframe');
+                        var iframed = (iframe.contentWindow || iframe.contentDocument);
+                        ph = document.forms[0].elements[0].value;
+                        
+                        if(ph == 'etokun'){
+                            ph = 'etokun/enter'
+                        }
+                        else {
+                            logmsg.innerHTML = ('正しく入力して下さい');
+                            return false;
+                        }
+                        location.href = 'extra/' + ph + '.html';
+                    }
+                </script>
+
+                <form name="login_form">
+                    <div class="login_form_top">Extra Page</div>
+                    <input id="ph" type="text" placeholder=" passphrase" required >
+                    <p id="loginMsg"></p>
+                    <input type="button" id="login" value="GO" onclick="return extra()">
+                </form>
+                
+            </div>
+            
+            <div class="sites">
+                <a href="index.html" class="icolink"><img src="/images/home.png" class="icon"></a>
+                <a href="https://twitter.com/nnn_aaa_rrr_uuu"" class="icolink"><img src="/images/twitter.png" class="icon"></a>
+                <a href="https://github.com/N4RU53" class="icolink"><img src="/images/github.png" class="icon"></a>
+            </div>
+
+        </div>
+
+        <iframe src="contents/mc/mctrpg/mctrpg.html" id="mframe" frameborder="0" class="contents"></iframe>
+
+    </div>
+
+    <footer>© 2023 Naru </footer>
+
+</body>
+
+</html>

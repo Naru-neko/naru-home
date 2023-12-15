@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='../fonts/Fira_Code_v6.2/fira_code.css' rel='stylesheet'>
+    <title>Profile</title>
+</head>
+
+<style>
+    ::-webkit-scrollbar{
+        width: 10px;
+     }
+     ::-webkit-scrollbar-track{
+        background-color: #ccc;
+     }
+     ::-webkit-scrollbar-thumb{
+        background-color: #17585d;
+     }
+    body{
+        background-color: #b7b8bb;
+        width: 100%;
+        margin: 0;
+        color: rgb(255, 255, 255);
+        font-family: 'Fira Code';
+    }
+    .top{
+        background-color: rgb(41, 59, 150);
+        padding: 7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #iconImg{
+        width: 24vw;
+        margin-right: 2vw;
+    }
+    h1{
+        width: 50%;
+        text-align: center;
+        font-size: 10vmin;
+        font-weight:400;
+    }
+    .info{
+        margin-top: 0;
+        padding: 2rem;
+        padding-left: 7vw;
+        list-style: none;
+    }
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: solid 2px rgb(58, 58, 58);
+    }
+    h2{
+        padding: 0.2rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        background-color: #636979;
+        border: solid 2px  rgb(58, 58, 58);
+        border-bottom: none;
+        font-size: 5vw;
+    }
+    h3{
+        color: black;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        font-size: 4.7vw;
+    }
+    h2, h3{
+        white-space: nowrap;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+</style>
+
+<body>
+    <div class="top">
+        <img src="../images/naruneko-icons/naruneko_icon.png" alt="NaruNeko" id="iconImg">
+        <h1>Profile</h1>
+    </div>
+    <div class="contents">
+        <ul class="info">
+            <li><h2>名前</h2><h3>Naru</h3></li>
+            <li><h2>性別</h2><h3>男</h3></li>
+            <li><h2>生年月日</h2><h3>1998/9/18</h3></li>
+            <li><h2>出身地</h2><h3>岐阜県</h3></li>
+            <li><h2>趣味</h2><h3>ゲーム, プログラミング</h3></li>
+            <li><h2>嫌いな食べ物</h2><h3>あんかけ</h3></li>
+            <li><h2>MBTI</h2><h3>ENTJ-T</h3></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='../fonts/Fira_Code_v6.2/fira_code.css' rel='stylesheet'>
+    <title>Contact</title>
+</head>
+
+<style>
+    ::-webkit-scrollbar{
+        width: 10px;
+     }
+     ::-webkit-scrollbar-track{
+        background-color: #ccc;
+     }
+     ::-webkit-scrollbar-thumb{
+        background-color: #17585d;
+     }
+    body{
+        background-color: #1d1a2e;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 2rem;
+        color: rgb(224, 224, 224);
+        font-family: 'Fira Code';
+        font-weight: 300;
+    }
+    html, body {
+        background: transparent;
+    }
+    form {
+        padding-left: 2rem;
+        padding-right: 1rem;
+        margin-bottom: 2rem;
+    }
+    h1{
+        font-size: 12vmin;
+        font-weight: 100;
+        margin-bottom: 4vmin;
+        margin-left: 1rem;
+    }
+    h2{
+        font-size: 5vmin;
+        margin: 0;
+        margin-bottom: 1vmin;
+        font-weight: 100;
+    }
+    input{
+        border: solid 2px #7a7a7a;
+        border-radius: 1vmin;
+        width: 65%;
+        padding: 1%;
+    }
+    .input-infos{
+        font-size: 4vmin;
+        margin-bottom: 1rem;
+    }
+    #contact-content{
+        padding: 1%;
+        font-size: 4vmin;
+        width: 85%;
+    }
+    #submit{
+        width: 20%;
+        font-size: 4vmin;
+        text-align: center;
+        padding: 0;
+        margin-top: 2rem;
+    }
+    h3{
+        padding-left: 2rem;
+        font-size: 3vmin;
+    }
+</style>
+
+<body>
+    <h1>Contact</h1>
+    <h3>※未実装　送信機能はありません</h3>
+    <form action="confirm.php" method="post">
+        <div class="section">
+            <h2>お名前</h2>
+            <input type="text" class="input-infos" name="name" placeholder="名前を入力">
+        </div>
+        <div class="section">
+            <h2>メールアドレス</h2>
+            <input type="text" class="input-infos" name="mail" placeholder="メールアドレスを入力">
+        </div>
+        <div class="section">
+            <h2>お問い合わせ内容</h2>
+            <textarea name="inquiry" id="contact-content" cols="30" rows="7" placeholder="内容を入力"></textarea>
+        </div>
+        <input type="submit" id="submit" value="送信" onclick="">
+    </form>
+    
+</body>
+</html>

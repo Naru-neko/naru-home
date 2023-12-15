@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <title>template</title>
+
+    <script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+
+    <script>
+
+        function OnSubmitClick() {
+            var result = window.confirm('現在の内容で解答を提出しますか？');
+            if (result == false){
+                return false;
+            }
+            var target = event.target;
+            var url = target.dataset.url;
+            window.location.href = url;
+        }
+
+        function total(){
+            var itemcount = $('.answer').length;
+            var total = document.getElementById('total');
+            total.innerHTML = itemcount;
+        }
+
+        function ansCnt(){
+            var anss = document.getElementsByClassName('ansBox');
+            var ansArray = Array.from(anss);
+            var cnt = 0;
+            for(let ele of ansArray){
+                if(ele.value.length > 0){
+                    cnt++;
+                }
+            }
+            var currentAns = document.getElementById('current');
+            currentAns.innerHTML = cnt;
+        }
+
+        window.addEventListener('load', () => {
+            total();
+        })
+        window.addEventListener('load', () => {
+            ansCnt();
+        })
+        
+    </script>
+
+</head>
+
+<body>
+
+    <a href="#Title"><img src="/images/totop.png" id="totop" title="トップへ"></a>
+
+    <header>
+        <h1>タイトル</h1>
+        <div class="stat">
+            <div id="current"></div> / <div id="total"></div> &nbsp;回答済&emsp; <button data-url="/index.html" onclick="OnSubmitClick();" id="submit">提出</button> 
+        </div>
+    </header>
+    
+    <div class="container">
+
+        <div class="contents">
+            <div id="1"><span class="qTag">Q1</span> <div class="question">hogehoge</div> <div class="answer">解答&nbsp;<input class="ansBox" type="text" onchange="ansCnt()"></div></div>
+            <div id="2"><span class="qTag">Q2</span> <div class="question">hogehoge</div> <div class="answer">解答&nbsp;<input class="ansBox" type="text" onchange="ansCnt()"></div></div>
+        </div>
+
+        <div class="side">
+            <div class="listTitle">問題一覧</div>
+            <hr>
+            <ul class="list">
+                <li><a href="">Q1.1</a></li>
+                <li><a href="">Q1.2</a></li>
+            </ul>
+
+            <hr>
+
+            <img src="/images/ngif.gif" class="naruneko" title="Naruneko">
+
+        </div>
+
+    </div>
+</body>
+</html>
