@@ -15,16 +15,11 @@ html{
 
 body{
     background-color: #040069;
+    background-color: #1f79a3;
     margin: 0;
     padding: 0;
     height: 100vh;
     font-family: 'Fira Code';
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    backdrop-filter: blur(17px);
 }
 
 .logon{
@@ -145,20 +140,15 @@ img{
     opacity: 0.30;
     }
 }
-
 header{
-    opacity: 0;
+    opacity: 1;
     position: sticky;
     position: -webkit-sticky;
     z-index: 10;
-    top: 10px;
-    border-radius: 1rem;
     margin-top: 0;
-    margin-right: 10px;
-    margin-left: 10px;
     padding: 0.2%;
-    padding-right: 3%;
-    padding-left: 3%;
+    padding-right: 2%;
+    padding-left: 2%;
     background-color: #0f111a;
     display: flex;
     justify-content: space-between;
@@ -195,7 +185,7 @@ h2{
 header a, h1, h2{
     text-decoration: none;
     color: #ffffff;
-    font-size: 21px;
+    font-size: 27px;
     font-weight: lighter;
     padding: 1px;
 }
