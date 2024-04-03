@@ -62,10 +62,10 @@
             document.getElementById("viewer-window").style.zIndex = 11;
             document.getElementById("viewer-window").style.left = 0;
         } else if (window.matchMedia('(min-width:768px)').matches) { /*PC*/
-            viewer_width = '60%';
-            viewer_height = '82%';
+            viewer_width = '95%';
+            viewer_height = '95%';
             document.getElementById("viewer-window").style.zIndex = 11;
-            document.getElementById("viewer-window").style.left = '35%';
+            document.getElementById("viewer-window").style.left = '0%';
         }
         document.querySelector(`#viewer-window`).animate(
             [ { opacity: 0 }, { opacity: 1 } ],
@@ -164,7 +164,7 @@
             <div class="shortCut">
                 <a class="shortCut-Link" href="javascript:void(0);" onclick="bootWindow('contents/profile.html','Profile.exe');">
                     <img class="shortCut-img" src="images/profile.png">
-                    <h3>Naru Profile</h3>
+                    <h3>Profile</h3>
                 </a>
             </div>
 
@@ -184,7 +184,7 @@
             </div>
 
             <div class="shortCut">
-                <a class="shortCut-Link" href="">
+                <a class="shortCut-Link" href="javascript:void(0);" onclick="bootWindow('contents/pictures.html','Pictures.exe')";>
                     <img class="shortCut-img" src="images/file.png">
                     <h3>Pictures</h3>
                 </a>
@@ -204,13 +204,14 @@
                 </a>
             </div>
 
+            <!--
             <div class="shortCut">
                 <a class="shortCut-Link" href="javascript:void(0);" onclick="bootWindow('contents/login.html','Login.exe');">
                     <img class="shortCut-img" src="images/login.png">
                     <h3>Login</h3>
                 </a>
             </div>
-
+            -->
             <div class="shortCut">
                 <a class="shortCut-Link" href="javascript:void(0);" onclick="bootWindow('contents/comingsoon.html','Coming soon...');">
                     <img class="shortCut-img" src="images/naruneko-icons/naruneko_icon.png">

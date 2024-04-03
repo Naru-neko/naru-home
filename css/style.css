@@ -235,7 +235,7 @@ main{
     background: rgba(8, 8, 8, 0.7);
     height: 29px;
     padding-left: 2%;
-    padding-right: 2%;
+    padding-right: 1%;
     display: flex;
     align-items: center;
     justify-content: space-between;
