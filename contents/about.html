@@ -23,7 +23,6 @@
         margin: 0;
         color: rgb(224, 224, 224);
         font-family: 'Fira Code';
-        text-shadow: 0 0 15px #fff;
     }
     html, body {
         background: transparent;
@@ -34,16 +33,27 @@
         padding-bottom: 2rem;
     }
     h1 {
-        font-size: 8vmin;
+        font-size: 5vmin;
         border-bottom: solid 2px white;
     }
     h2{
-        font-size: 6vmin;
+        font-size: 3vmin;
         border-bottom: solid 1px white;
         margin-top: 3rem;
     }
     h3{
-        font-size: 4vmin;
+        font-size: 2vmin;
+    }
+    @media screen and (max-width:480px) { /*phone*/
+        h1 {
+            font-size: 8vmin;
+        }
+        h2{
+            font-size: 6vmin;
+        }
+        h3{
+            font-size: 4vmin;
+        }
     }
 </style>
 

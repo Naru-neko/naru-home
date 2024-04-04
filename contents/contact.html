@@ -22,6 +22,7 @@
         width: 100%;
         margin: 0;
         padding-bottom: 2rem;
+        padding-left: 1rem;
         color: rgb(224, 224, 224);
         font-family: 'Fira Code';
         font-weight: 300;
@@ -35,13 +36,14 @@
         margin-bottom: 2rem;
     }
     h1{
-        font-size: 12vmin;
+        font-size: 8vmin;
         font-weight: 100;
         margin-bottom: 4vmin;
         margin-left: 1rem;
+        margin-top: 1.2rem;
     }
     h2{
-        font-size: 5vmin;
+        font-size: 3vmin;
         margin: 0;
         margin-bottom: 1vmin;
         font-weight: 100;
@@ -53,24 +55,44 @@
         padding: 1%;
     }
     .input-infos{
-        font-size: 4vmin;
+        font-size: 3vmin;
         margin-bottom: 1rem;
     }
     #contact-content{
         padding: 1%;
-        font-size: 4vmin;
+        font-size: 3vmin;
         width: 85%;
     }
     #submit{
         width: 20%;
-        font-size: 4vmin;
+        font-size: 3vmin;
         text-align: center;
         padding: 0;
         margin-top: 2rem;
     }
     h3{
         padding-left: 2rem;
-        font-size: 3vmin;
+        font-size: 2vmin;
+    }
+    @media screen and (max-width:480px) { /*phone*/
+        h1{
+            font-size: 12vmin;
+        }
+        h2{
+            font-size: 5vmin;
+        }
+        .input-infos{
+            font-size: 4vmin;
+        }
+        #contact-content{
+            font-size: 4vmin;
+        }
+        #submit{
+            font-size: 4vmin;
+        }
+        h3{
+            font-size: 3vmin;
+        }
     }
 </style>
 

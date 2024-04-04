@@ -1,0 +1,213 @@
+:root {
+    --pw-delay: 2s;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+ }
+ ::-webkit-scrollbar-track{
+    background-color: #ccc;
+ }
+ ::-webkit-scrollbar-thumb{
+    background-color: #17585d;
+ }
+
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Fira Code';
+    background-color: #1d1f26;
+}
+
+img{
+    vertical-align:top;
+}
+
+.logon{
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #1d1f26;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    animation-name: fadeOutAnime;
+    animation-fill-mode:forwards;
+    animation-duration: 0.5s;
+    animation-timing-function:ease;
+    animation-delay: 8s;
+
+}
+
+.logon-contents{
+    opacity: 0;
+    color: #ccc;
+    font-size: 7vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: fadeInAnime;
+    animation-fill-mode:forwards;
+    animation-duration: 1s;
+    animation-timing-function:ease;
+    animation-delay: 0.5s;
+}
+
+#logon-icon{
+    width: 30vmin;
+    margin-bottom: 1rem;
+}
+
+#user-name {
+    text-shadow:0 0 12px #fff;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.logon-pw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logon-form {
+    background-color: #ffffff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.2rem;
+    padding-left: 0.8rem;
+    border: solid 0.2rem #727272;
+}
+
+.logon-form p {
+    padding-left: 0.4rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInAnime 0.3s forwards;
+}
+
+#logon-button {
+    background-color: #575757;
+    border: solid 0.2rem #858585;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    animation: push-button 1s forwards;
+    animation-delay: 3.5s;
+}
+
+.pulse-container {
+    width: 20vmin;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInAnime 0.5s forwards;
+    animation-delay: 5.5s;
+}
+
+.pulse-bubble {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3ff9dc;
+}
+  
+.pulse-bubble-1 {
+    animation: pulse .4s ease 0s infinite alternate ;
+}
+.pulse-bubble-2 {
+    animation: pulse .4s ease .2s infinite alternate;
+}
+.pulse-bubble-3 {
+    animation: pulse .4s ease .4s infinite alternate;
+}
+
+.logon-form p:nth-child(1) {
+    animation-delay: calc(var(--pw-delay) + 0s);
+}
+.logon-form p:nth-child(2) {
+    animation-delay: calc(var(--pw-delay) + 0.1s);
+}
+.logon-form p:nth-child(3) {
+    animation-delay: calc(var(--pw-delay) + 0.2s);
+}
+.logon-form p:nth-child(4) {
+    animation-delay: calc(var(--pw-delay) + 0.3s);
+}
+.logon-form p:nth-child(5) {
+    animation-delay: calc(var(--pw-delay) + 0.4s);
+}
+.logon-form p:nth-child(6) {
+    animation-delay: calc(var(--pw-delay) + 0.5s);
+}
+.logon-form p:nth-child(7) {
+    animation-delay: calc(var(--pw-delay) + 0.6s);
+}
+.logon-form p:nth-child(8) {
+    animation-delay: calc(var(--pw-delay) + 0.7s);
+}
+
+@keyframes push-button{
+    0% {
+    background-color: #575757;
+    }
+
+    50% {
+    background-color: #b9b9b9;
+    }
+
+    100% {
+    background-color: #575757;
+    }
+}
+
+@keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: .25;
+      transform: scale(.75);
+    }
+  }
+
+@keyframes fadeInAnime{
+    0% {
+    opacity: 0;
+    }
+
+    100% {
+    opacity: 1;
+    }
+}
+
+@keyframes fadeOutAnime{
+    0% {
+    opacity: 1;
+    }
+
+    100% {
+    opacity: 0;
+    }
+}
