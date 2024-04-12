@@ -18,100 +18,143 @@
         background-color: #17585d;
      }
     body{
-        background-color: #b7b8bb;
+        background-color: #080808;
         width: 100%;
         margin: 0;
         color: rgb(255, 255, 255);
         font-family: 'Fira Code';
     }
-    .top{
-        background-color: rgb(41, 59, 150);
-        padding: 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #iconImg{
-        width: 10vw;
-        margin-right: 2vw;
-    }
-    h1{
-        width: 30%;
-        text-align: center;
-        font-size: 7vmin;
-        font-weight:400;
-    }
-    .info{
-        margin-top: 0;
-        padding: 2rem;
-        padding-left: 7vw;
-        list-style: none;
-    }
-    li{
+
+    .content{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        border-bottom: solid 2px rgb(58, 58, 58);
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        width: 60vw;
+        padding: 5%;
     }
+
+    img {
+        width: 25vw;
+        height: 25vw;
+        opacity: 0;
+        animation: fadeInAnime 2s forwards;
+        animation-delay: 1s;
+    }
+
+    .info{
+        margin-left: 3rem;
+    }
+
     h2{
-        padding: 0.2rem;
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
-        background-color: #636979;
-        border: solid 2px  rgb(58, 58, 58);
-        border-bottom: none;
-        font-size: 1.3vw;
+        font-size: 400%;
+        opacity: 0;
+        animation: fadeInAnime 2s forwards;
+        animation-delay: 1.5s;
     }
-    h3{
-        color: black;
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
-        font-size: 2.1vw;
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        animation: fadeInAnime 2s forwards;
+        animation-delay: 3.0s;
     }
-    h2, h3{
-        white-space: nowrap;
-        margin-bottom: 0;
+
+    hr{
         margin-top: 0;
+        margin-bottom: 2rem;
+        transform-origin: left;
+        transform: scaleX(0);
+        animation: linescale 2s forwards;
+        animation-delay: 1.5s;
     }
+
+    h3, h4{
+        margin: 0;
+        margin-bottom: 0.2rem;
+        font-size: 2vw;
+        white-space: nowrap;
+    }
+
+    h3{
+        padding-right: 4rem;
+    }
+
+    h4{
+        margin-left: 2rem;
+    }
+
+    @keyframes fadeInAnime{
+        0% {
+        opacity: 0;
+        }
+    
+        100% {
+        opacity: 1;
+        }
+    }
+
+    @keyframes linescale{
+        0% {
+        transform: scaleX(0%);
+        }
+    
+        100% {
+            transform: scaleX(100%);
+        }
+    }
+
     @media screen and (max-width:480px) { /*phone*/
-        .top{
-            padding: 4%;
+        .content{
+            flex-direction: column;
+            width: 80vw;
         }
-        #iconImg{
-            width: 20vw;
-            margin-right: 2vw;
+
+        img{
+            width: 40vw;
+            height: 40vw;
+            margin-top: 4rem;
+            margin-bottom: 1rem;
         }
-        h1{
-            width: 50%;
-            font-size: 8vmin;
+
+        .info{
+            margin-left: 0;
         }
+
         h2{
+            font-size: 300%;
+            margin-bottom: 1rem;
+        }
+
+        h3, h4{
+            margin: 0;
             font-size: 5vw;
         }
+
         h3{
-            font-size: 4.7vw;
+            padding-right: 1rem;
         }
+    
     }
+
+    
 </style>
 
 <body>
-    <div class="top">
-        <img src="../images/naruneko-icons/naruneko_icon.png" alt="NaruNeko" id="iconImg">
-        <h1>Profile</h1>
+    <div class="content">
+        <img src="/images/profile.png" alt="">
+        <div class="info">
+            <h2 id="name">Naru</h2>
+            <div class="row"><h3>Birthday:</h3><h4>1998/9/18</h4></div><hr>
+            <div class="row"><h3>Gender:</h3><h4>male</h4></div><hr>
+            <div class="row"><h3>Hometown:</h3><h4>Gifu, Japan</h4></div><hr>
+        </div>
     </div>
-    <div class="contents">
-        <ul class="info">
-            <li><h2>名前</h2><h3>Naru</h3></li>
-            <li><h2>性別</h2><h3>男</h3></li>
-            <li><h2>生年月日</h2><h3>1998/9/18</h3></li>
-            <li><h2>出身地</h2><h3>岐阜県</h3></li>
-            <li><h2>趣味</h2><h3>ゲーム, プログラミング</h3></li>
-            <li><h2>嫌いな食べ物</h2><h3>あんかけ</h3></li>
-            <li><h2>MBTI</h2><h3>ENTJ-T</h3></li>
-        </ul>
-    </div>
-    
 </body>
 </html>

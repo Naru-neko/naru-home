@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='../fonts/Fira_Code_v6.2/fira_code.css' rel='stylesheet'>
+    <title>Profile</title>
+</head>
+
+<style>
+    ::-webkit-scrollbar{
+        width: 10px;
+     }
+     ::-webkit-scrollbar-track{
+        background-color: #ccc;
+     }
+     ::-webkit-scrollbar-thumb{
+        background-color: #17585d;
+     }
+    body{
+        background-color: #080808;
+        width: 100%;
+        height: 95vh;
+        margin: 0;
+        color: rgb(255, 255, 255);
+        font-family: 'Fira Code';
+    }
+    main{
+        margin-left: 1rem;
+    }
+
+    .input{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .user{
+        color: greenyellow;
+    }
+
+    .prompt{
+        color: blue;
+    }
+
+    .fetch{
+        display: flex;
+        justify-content: start;
+        align-items:start;
+    }
+
+    .fetch-icon{
+        font-size: 10px;
+    }
+
+    ul{
+        margin-top: 0;
+    }
+
+    li{
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        list-style: none;
+    }
+
+    h1, h2{
+        font-size: 21px;
+        font-weight:lighter;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    h1{
+        color: red;
+    }
+
+    @media screen and (max-width:480px) { /*phone*/
+        .fetch{
+            flex-direction: column;
+        }
+        .fetch-icon{
+            font-size: 5px;
+        }
+        ul{
+            padding: 0;
+        }
+    }
+
+</style>
+<body>
+    <main>
+        <div class="input">
+            <p class="user">root@NaruDesktop:</p>
+            <p class="pwd">/desktop/profile/</p><br>
+            <p class="prompt">&nbsp;~ $&nbsp;</p>
+            <p class="command">profilefetch</p>
+        </div>
+        <div class="fetch">
+            <p class="fetch-icon">
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM@g@@@HMNNNMMH@g@g@MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMggMNNMMMMMMMMMMMMMMMMMMNNH@gMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMgMNMMMMMMMMMMMMMMMMMMMMMMMMMMMMNH@HMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMM#?TM@@NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN@@MB>dMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMM$jW@HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMHgH&JMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMd@H3;?WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM#>;?H@mMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMM@#<;:;;dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM8;;:;&lt;WgMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMM@#;:;;:;;?MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM5;:;;:;;W@MMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMg@I;;:;:;:;dMMMMMMMMMMMMMMMMMMMMMMMMMMMM@;:;:;;:;j@gMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMM@Mr;:;:;:jgMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMaJ;;:;;:jN@MMMMMMMMMMMMM<br>
+                MMMMMMMMMMMM@gMP;;:;jMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNJ:;;;jM@@MMMMMMMMMMMM<br>
+                MMMMMMMMMMMMg@M#:;&lt;uMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN&lt;:;dM@gMMMMMMMMMMMM<br>
+                MMMMMMMMMMMN@HMN;jMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN+;MMM@MMMMMMMMMMMM<br>
+                MMMMMMMMMMMNgMMMaMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNJMMM@MMMMMMMMMMMM<br>
+                MMMMMMMMMMMN@HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMgMMMMMMMMMMMM<br>
+                MMMMMMMMMMMgggpMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNpgg@MMMMMMMMMMM<br>
+                MMMMMMMMM#M@g@pMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNpgggHHMMMMMMMMM<br>
+                MMMMMMM@gPW@@gpMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNfg@@HJg@MMMMMMM<br>
+                MMMMMMMM@PWgggpMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNpg@gHJ@HMMMMMMM<br>
+                MMMMMMMM@PW@ggpMMMMMMMMMM@`&nbsp;&nbsp;&nbsp;TMMMMMMMMMMMMMMMMF&nbsp;&nbsp;&nbsp;&nbsp;WMMMMMMMMMNpgg@HJgHMMMMMMM<br>
+                MMMMMMMMgDWHHHWMMMMMMMMMM`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMMMMMMMMMMMMMMM`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMMMMMMMM#WHHHHJ@HMMMMMMM<br>
+                MMMMMMMM@PW@ggpMMNMMMMMM#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MMMMMMMMMMMMMMMN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dMMMMMMNMNpg@gHJ@MNMMMMMM<br>
+                MMMMMMMM@PW@@gpMMMMMMMMMMe&nbsp;&nbsp;&nbsp;&nbsp;.MMMMMMMMMMMMMMMMx&nbsp;&nbsp;&nbsp;&nbsp;.MMMMMMMMMNfg@@HJgMMMMMMMM<br>
+                MMMMMMMMNNHHHHkNNNNMMMMMMMN..JMMMMMMMMMMMMMMMMMMm..dMMMMMMMNNNNXWHHNgMMMMMMMMM<br>
+                MMMMMMMMMNMNHgpMMMMMMMMMMMMMMMMMMMMMMM"7MMMMMMMMMMMMMMMMMMMMMMNpgMNMNMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN.?" .b 7" dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+                MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br>
+            </p>
+            <ul>
+                <li><h1>Name:&nbsp;</h1><h2>Naru</h2></li>
+                <li><h1>Birthday:&nbsp;</h1><h2>1998/9/18</h2></li>
+                <li><h1>Gender:&nbsp;</h1><h2>Male</h2></li>
+                <li><h1>Hometown:&nbsp;</h1><h2>Gifu, Japan</h2></li>
+            </ul>
+        </div>
+        <div class="input">
+            <p class="user">root@NaruDesktop:</p>
+            <p class="pwd">/desktop/profile/</p>
+            <p class="prompt">&nbsp;~ $</p>
+        </div>
+    </main>
+</body>
+</html>
