@@ -24,6 +24,10 @@ body{
     font-family: 'Fira Code';
     background-color: #1d1f26;
     background-image: url('/images/logonbg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 a {
