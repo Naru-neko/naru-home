@@ -62,6 +62,10 @@ html{
     margin-top: 0;
  }
 
+ #preview-img{
+    width:100%
+ }
+
  h2 {
     padding: 10px;
     padding-left: 1rem;
@@ -116,11 +120,6 @@ h3{
     color: rgb(65, 65, 65);
 }
 
-.naruneko{
-    margin-top: 60px;
-    width: 90%;
-}
-
 .commandkind{
     border-radius: 10px;
     color: #ffffff;
@@ -166,6 +165,19 @@ h3{
     background-color: #f1f1f1;
     border-left:  5px solid #fdba02;
     list-style-position: inside;
+    list-style: none;
+}
+
+.type-img{
+    width: 25vw;
+}
+
+.type-describe{
+    width: 43vw;
+}
+
+.type-img, .type-describe{
+    margin-left: 2vw;
 }
 
 footer{
