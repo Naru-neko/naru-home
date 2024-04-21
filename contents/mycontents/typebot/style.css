@@ -1,6 +1,12 @@
 ::-webkit-scrollbar{
     width: 10px;
  }
+ .side ::-webkit-scrollbar{
+    width: 6px;
+ }
+ .side ::-webkit-scrollbar-track{
+    background-color: #7b838f; 
+ }
 ::-webkit-scrollbar-track{
     background-color: #262d38;
  }
@@ -14,7 +20,7 @@ html{
 }
 
  body{
-    background-color: rgba(255, 255, 255, 0.651);
+    background-color: rgb(226, 238, 238);
     height: 100%;
     margin: 0px;
  }
@@ -39,8 +45,6 @@ html{
     width: 48vw;
     margin-right: 2%;
     padding: 4rem;
-    border: solid 0.3rem #969696;
-    border-radius: 1rem;
  }
 
  .title {
@@ -52,8 +56,8 @@ html{
 
  h1{
     padding: 1rem 2rem;
-    color: rgb(75, 234, 255);
-    background: rgb(0, 0, 0);
+    color: rgb(43, 43, 43);
+    background: rgb(221, 221, 221);
     -webkit-box-shadow: 5px 5px 0 #a5a5a5;
     box-shadow: 5px 5px 0 #464646;
     border-left: 5px solid #00d9ff;
@@ -81,11 +85,10 @@ h3{
 }
 
 .side {
-    border-radius: 15px;
-    background-color: #d1d1d1;
+    background-color: #ffffff;
     height: fit-content;
     max-height: 75vh;
-    width: 18%;
+    width: 15%;
     padding: 1rem;
     padding-top: 1.3rem;
     position: sticky;
@@ -95,7 +98,7 @@ h3{
 
  @media (max-width: 1200px) {
     .contents{
-        width: 70vw;
+        width: 80vw;
         margin-right: 0;
     }
     .side{
@@ -112,7 +115,7 @@ h3{
     padding-right: 5px;
     margin: 10px;
     list-style: none;
-    font-size: 19px;
+    font-size: 103%;
     line-height: 32px;
 }
 
