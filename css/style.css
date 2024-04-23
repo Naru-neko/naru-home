@@ -244,6 +244,14 @@ main{
     display: flex;
     justify-content: start;
     align-items: center;
+
+    opacity: 0;
+
+    animation-name: fadeInAnime;
+    animation-fill-mode:forwards;
+    animation-duration: 0.5s;
+    animation-timing-function:ease;
+    animation-delay: 1.0s;
 }
 
 #side-menu{
@@ -336,17 +344,10 @@ hr{
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    opacity: 0;
     text-align: center;
     margin: 2vw;
     margin-bottom: 0;
     margin-top: 5vh;
-
-    animation-name: fadeInAnime;
-    animation-fill-mode:forwards;
-    animation-duration: 0.5s;
-    animation-timing-function:ease;
-    animation-delay: 1.2s;
 }
 
 
