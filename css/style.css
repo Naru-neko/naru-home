@@ -164,7 +164,6 @@ h2{
     text-decoration: none;
     color: #10101d;
 }
-
   
   .drawer_hidden {
     display: none;
@@ -227,33 +226,29 @@ h2{
     padding-top: 20px;
 }
   
-#drawer_input:checked ~ #nav_content {
-    right: 0%;
+#nav_content a {
+    color: #ffffff;
 }
-
-.nav_list {
-    list-style: none;
-}
-  
-  .nav_item a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
 
 main{
     width: 100%;
     color: #ffffff;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
 }
 
-.side-menu{
-    width: 15vw;
-    background-color: #a89595;
+#side-menu{
+    width: 13rem;
+    background-color: #383a44;
     height: 100vh;
-    color: #10101d;
+    border-right: solid 2px #494949;
+    padding-left: 1.5rem;
+}
+
+#side-menu a{
+    text-decoration: none;
+    color: #dbdbdb;
 }
 
 #viewer-window{
@@ -427,7 +422,11 @@ footer{
         margin-right: 0.6rem;
     }
 
-    .side-menu{
+    #drawer_input:checked ~ #nav_content {
+        right: 0%;
+    }
+
+    #side-menu{
         display: none;
     }
 
@@ -459,6 +458,11 @@ footer{
     html{
         overflow: hidden;
     }
+
+    .drawer_open{
+        display: none;
+    }
+
     .shortCuts{
         height: 94vh;
         width: fit-content;
