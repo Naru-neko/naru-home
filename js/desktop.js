@@ -47,12 +47,12 @@ function viewerToVisible() {
     if (window.matchMedia('(max-width: 767px)').matches) { /*phone*/
         viewer_width = '97%';
         viewer_height = '97%';
-        document.getElementById("viewer-window").style.zIndex = 11;
+        document.getElementById("viewer-window").style.zIndex = 101;
         document.getElementById("viewer-window").style.left = 0;
     } else if (window.matchMedia('(min-width:768px)').matches) { /*PC*/
         viewer_width = '86%';
         viewer_height = '90%';
-        document.getElementById("viewer-window").style.zIndex = 11;
+        document.getElementById("viewer-window").style.zIndex = 101;
         document.getElementById("viewer-window").style.left = '0%';
     }
     document.querySelector(`#viewer-window`).animate(

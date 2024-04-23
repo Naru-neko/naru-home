@@ -49,16 +49,9 @@ header{
     opacity: 0;
     position: sticky;
     position: -webkit-sticky;
-    z-index: 10;
+    z-index: 99;
     margin-top: 0;
     padding: 0;
-    padding-left: 0.5rem;
-    padding-right: 1%;
-    background-color: #666e94;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
 
     animation-name: fadeInAnime;
     animation-fill-mode:forwards;
@@ -67,12 +60,23 @@ header{
     animation-delay: 0.5s;
 }
 
+.header-top{
+    padding-left: 0.5rem;
+    padding-right: 1%;
+    background-color: #666e94;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
 #home-button {
     padding: 0.2rem;
     padding-left: 0.4rem;
     padding-right: 1rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 #home-button:hover {
@@ -82,6 +86,12 @@ header{
 h1{
     margin: 0;
     white-space: nowrap;
+}
+
+#home-button img{
+    width: 1.5rem;
+    height: 1.3rem;
+    margin-right: 0.4rem;
 }
 
 .right-menu{
@@ -101,18 +111,7 @@ h2{
     white-space: nowrap;
 }
 
-#reboot {
-    margin: 0;
-    margin-left: 0.6rem;
-    margin-bottom: 0.2rem;
-}
-
-#reboot:hover {
-    background-color: #a8a8a8;
-    border-radius: 50%;
-}
-
-header a, h1, h2{
+.header-top a, h1, h2{
     text-decoration: none;
     color: #ffffff;
     font-size: 27px;
@@ -120,27 +119,141 @@ header a, h1, h2{
     padding: 1px;
 }
 
+.header-bottom{
+    padding-left: 0.5rem;
+    padding-right: 1%;
+    background-color: #858585;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.topic-path{
+    margin: 0.5rem;
+    white-space: nowrap;
+    font-size: 1rem;
+}
+
+.topic-path ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.topic-path li{
+    list-style: none;
+}
+
+.topic-path li::after{
+    content: '>';
+    display: inline-block;
+    padding: 0 10px; /*左右に余白*/
+  }
+  
+.topic-path li:last-child::after{
+    display: none;
+  }
+
+.topic-path li:nth-child(2), li:nth-child(3){
+    display: none;
+}
+
+.topic-path a{
+    text-decoration: none;
+    color: #10101d;
+}
+
+  
+  .drawer_hidden {
+    display: none;
+  }
+  
+  .drawer_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+    margin: 1rem;
+  }
+  
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #ffffff;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+#nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    right:100%; /* メニューを画面の外に飛ばす */
+    z-index: 1;
+    background: rgb(110, 110, 110);
+    transition: .5s;
+    text-align: center;
+    padding-top: 20px;
+}
+  
+#drawer_input:checked ~ #nav_content {
+    right: 0%;
+}
+
+.nav_list {
+    list-style: none;
+}
+  
+  .nav_item a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+
 main{
     width: 100%;
     color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#bgimg{
-    z-index: 0;
-    width: 40vmin;
-    opacity: 0;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-
-    animation-name: fadeInBg;
-    animation-fill-mode:forwards;
-    animation-duration: 0.5s;
-    animation-timing-function:ease;
-    animation-delay: 0.5s;
+.side-menu{
+    width: 15vw;
+    background-color: #a89595;
+    height: 100vh;
+    color: #10101d;
 }
 
 #viewer-window{
@@ -149,7 +262,7 @@ main{
     background: rgba(30, 30 , 30, 0.7);
     border: solid 2px rgba(67, 67, 70, 0.95);
     overflow: hidden;
-    z-index: 2;
+    z-index: 100;
     width: 0;
     height: 0;
     position: fixed;
@@ -275,7 +388,7 @@ footer{
     overflow: hidden;
     text-overflow: ellipsis;
     font-size:3vmin;
-    color: #b3b2b2;
+    color: #3d3d3d;
     bottom: 1vh;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -299,14 +412,23 @@ footer{
     #muteIcon{
         width: 5.5vmin;
     }    
-    header a, h2{
+    .header-top a, h2{
         font-size: 4.5vmin;
+    }
+
+    #home-button img{
+        width: 1.2rem;
+        height: 1rem;
     }
 
     #home-img, #reboot {
         height: 1rem;
         padding-top: 0.2rem;
         margin-right: 0.6rem;
+    }
+
+    .side-menu{
+        display: none;
     }
 
 	.shortCuts {

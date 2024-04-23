@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
     <link href='fonts/Fira_Code_v6.2/fira_code.css' rel='stylesheet'>
-    <title>NaruCom</title>
+    <title>NaruExplorer</title>
 </head>
 
 <audio preload="auto" class="audios" id="openAudio" muted=true>
@@ -17,19 +17,37 @@
 
 <body onload="showTime();">
     <header>
-        <a href="index.html" id="home-button">
-            <h1>NaruCom</h1>
-        </a>
-        <div class="right-menu">
-            <a class="sound-toggle" href="javascript:void(0);" onclick="toggleMute();">
-                <!-- <img id="muteIcon" src="images/mute.png" alt="サウンドミュート"> -->
+        <div class="header-top">
+            <a href="" id="home-button">
+                <img src="/images/file.png" alt="">
+                <h1>NaruExplorer</h1>
             </a>
-            <h2 id="time"></h2>
+            <div class="right-menu">
+                <a class="sound-toggle" href="javascript:void(0);" onclick="toggleMute();">
+                    <!-- <img id="muteIcon" src="images/mute.png" alt="サウンドミュート"> -->
+                </a>
+                <h2 id="time"></h2>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+            <nav id="nav_content"></nav>
+            <nav class="topic-path">
+                <ul>
+                    <li><a href="" id="home">Home</a></li>
+                    <li><a href="" id="category">hoge</a></li>
+                    <li><a href="" id="topics">hoge</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
-        
+        <div id="side-menu">
+
+        </div>
+
         <div class="shortCuts">
             <div class="shortCut">
                 <a class="shortCut-Link" href="javascript:void(0);" onclick="bootWindow('contents/profilefetch.html','Profile.exe');">
@@ -54,13 +72,6 @@
             </div>
 
             <div class="shortCut">
-                <a class="shortCut-Link" href="javascript:void(0);" onclick="bootWindow('contents/mycontents.html','contents.exe')";>
-                    <img class="shortCut-img" src="images/file.png">
-                    <h3>Contents</h3>
-                </a>
-            </div>
-
-            <div class="shortCut">
                 <a class="shortCut-Link" href="javascript:void(0);" onclick="bootWindow('contents/about.html','About.exe');">
                     <img class="shortCut-img" src="images/about.png">
                     <h3>About</h3>
@@ -73,16 +84,7 @@
                     <h3>Contact</h3>
                 </a>
             </div>
-
-            <!--
-            <div class="shortCut">
-                <a class="shortCut-Link" href="javascript:void(0);" onclick="bootWindow('contents/login.html','Login.exe');">
-                    <img class="shortCut-img" src="images/login.png">
-                    <h3>Login</h3>
-                </a>
-            </div>
-            -->
-
+        
         </div>
 
         <div id="viewer-window">
@@ -99,5 +101,11 @@
     <footer>© 2023 Naru. All Rights Reserved.</footer>
 
     <script src="js/desktop.js"></script>
+    <script>
+        fetch("/components/side-menu.html")
+          .then((response) => response.text())
+          .then((data) => document.querySelector("#nav_content").innerHTML = data)
+          .then((data) => document.querySelector("#side-menu").innerHTML = data);
+    </script>
 </body>
 </html>
