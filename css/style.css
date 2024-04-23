@@ -14,7 +14,7 @@ html{
 }
 
 body{
-    background-color: #6e95eb;
+    background-color: #10101d;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -54,7 +54,7 @@ header{
     padding: 0;
     padding-left: 0.5rem;
     padding-right: 1%;
-    background-color: #0f111a;
+    background-color: #666e94;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,12 +77,6 @@ header{
 
 #home-button:hover {
     background-color: #494949;
-}
-
-#reboot{
-    height: 1.8rem;
-    padding-top: 0.2rem;
-    margin-right: 1rem;
 }
 
 h1{
