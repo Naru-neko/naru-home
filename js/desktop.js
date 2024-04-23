@@ -2,7 +2,7 @@ window.setInterval(showTime, 1000);
 window.onresize = resize;
 
 vw_stat = false;
-audioMuted = true;
+side_hidden = false;
 
 function resize(){
     if (vw_stat) {
@@ -84,30 +84,31 @@ function bootWindow(url, name){
     }
 }
 
-function toggleMute(){
+function toggleSide(){
     var audios = document.querySelectorAll('.audios');
-    if(audioMuted){
-        for(var i=0;i<audios.length;i++){
-            audios[i].muted = false;
-            audios[i].volume = 0.1;
-        }
-        document.getElementById('muteIcon').src = 'images/speaker.png';
-        audioMuted = false;
+    if(side_hidden){
+        document.getElementById('side-toggle-icon').src = 'images/side-in.png';
+        document.querySelector(`#side-menu`).animate(
+            [ { width: 0 }, { width: '13rem' } ],
+            { duration: 200, fill: 'forwards'}
+        );
+        document.querySelector(`#side-menu`).animate(
+            [ { opacity: 0 }, { opacity: 1 } ],
+            { duration: 100, fill: 'forwards', delay: 100}
+        );
+        side_hidden = false;
     } else {
-        for(var i=0;i<audios.length;i++){
-            audios[i].muted = true;
-        }
-        document.getElementById('muteIcon').src = 'images/mute.png';
-        audioMuted = true;
+        document.getElementById('side-toggle-icon').src = 'images/side-out.png';
+        document.querySelector(`#side-menu`).animate(
+            [ { width: '13rem' }, { width: 0 } ],
+            { duration: 200, fill: 'forwards'}
+        );
+        document.querySelector(`#side-menu`).animate(
+            [ { opacity: 1 }, { opacity: 0 } ],
+            { duration: 100, fill: 'forwards', delay: 100}
+        );
+        side_hidden = true;
     }
-}
-
-function openSE(){
-    document.getElementById("openAudio").play();
-}
-
-function closeSE(){
-    document.getElementById("closeAudio").play();
 }
 
 function typing(selector){

@@ -8,12 +8,6 @@
     <title>NaruExplorer</title>
 </head>
 
-<audio preload="auto" class="audios" id="openAudio" muted=true>
-    <source src="audio/se/open/open.mp3" type="audio/mp3">
-</audio>
-<audio preload="auto" class="audios" id="closeAudio" muted=true>
-    <source src="audio/se/close/close.mp3" type="audio/mp3">
-</audio>
 
 <body onload="showTime();">
     <header>
@@ -22,14 +16,10 @@
                 <img src="/images/file.png" alt="">
                 <h1>NaruExplorer</h1>
             </a>
-            <div class="right-menu">
-                <a class="sound-toggle" href="javascript:void(0);" onclick="toggleMute();">
-                    <!-- <img id="muteIcon" src="images/mute.png" alt="サウンドミュート"> -->
-                </a>
-                <h2 id="time"></h2>
-            </div>
+            <h2 id="time"></h2>
         </div>
         <div class="header-bottom">
+            <a class="side-toggle" href="javascript:void(0);" onclick="toggleSide();"><img src="images/side-in.png" alt="" id="side-toggle-icon"></a>
             <input id="drawer_input" class="drawer_hidden" type="checkbox">
             <label for="drawer_input" class="drawer_open"><span></span></label>
             <nav id="nav_content"></nav>

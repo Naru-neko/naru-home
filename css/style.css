@@ -94,18 +94,6 @@ h1{
     margin-right: 0.4rem;
 }
 
-.right-menu{
-    margin: 0;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-}
-
-#muteIcon{
-    width: 26px;
-    margin-right: 1rem;
-}
-
 h2{
     margin: 0;
     white-space: nowrap;
@@ -127,6 +115,21 @@ h2{
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+}
+
+.side-toggle{  
+    margin: 0.2rem;
+}
+
+.side-toggle:hover{
+    background-color: #587986;
+}
+
+.side-toggle img{
+    width: 2.3rem;
+    height: 2rem;
+    margin-right: 0.4rem;
+    margin: 0.2rem;
 }
 
 .topic-path{
@@ -229,6 +232,11 @@ h2{
 #nav_content a {
     color: #ffffff;
 }
+
+#drawer_input:checked ~ #nav_content {
+    right: 0%;
+}
+
 
 main{
     width: 100%;
@@ -416,14 +424,8 @@ footer{
         height: 1rem;
     }
 
-    #home-img, #reboot {
-        height: 1rem;
-        padding-top: 0.2rem;
-        margin-right: 0.6rem;
-    }
-
-    #drawer_input:checked ~ #nav_content {
-        right: 0%;
+    .side-toggle{
+        display: none;
     }
 
     #side-menu{
