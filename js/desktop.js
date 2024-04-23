@@ -43,7 +43,6 @@ function viewerCloser() {
 }
 
 function viewerToVisible() {
-    //openSE();
     if (window.matchMedia('(max-width: 767px)').matches) { /*phone*/
         viewer_width = '97%';
         viewer_height = '97%';
