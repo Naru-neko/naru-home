@@ -4,6 +4,7 @@ window.onresize = resize;
 vw_stat = false;
 side_hidden = false;
 
+
 function resize(){
     if (vw_stat) {
         w_duration = 1;
