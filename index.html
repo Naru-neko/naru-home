@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/header.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/side.css" rel="stylesheet" type="text/css" media="all">
     <link href='fonts/Fira_Code_v6.2/fira_code.css' rel='stylesheet'>
     <title>NaruExplorer</title>
 </head>
@@ -71,15 +72,16 @@
     <footer>© 2023 Naru. All Rights Reserved.</footer>
 
     <script>
-        fetch("components/menu-content.html")
-            .then((response) => response.text())
-            .then((data) => document.querySelector("#side-menu").innerHTML = data);
-        fetch("components/menu-content.html")
-            .then((response) => response.text())
-            .then((data) => document.querySelector("#nav_content").innerHTML = data);
+        <!-- 順番大事。Header読み込み後にナビゲーション読み込み。親から順にFetch -->
         fetch("components/header.html")
             .then((response) => response.text())
             .then((data) => document.querySelector("header").innerHTML = data);
+        fetch("components/menu-content.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("#nav_content").innerHTML = data);
+        fetch("components/menu-content.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("#side-menu").innerHTML = data);
     </script>
     <script src="js/explorer.js"></script>
 </body>
