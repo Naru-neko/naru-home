@@ -1,7 +1,9 @@
-#side-menu{
-    width: 13rem;
-    background-color: #000000;
-    height: 100vh;
+#side-bar{
+    width: 14rem;
+    min-width: 12rem;
+    bottom: 0;
+    overflow-y: scroll;
+    margin: 0;
     border-right: solid 2px #93fbff;
     opacity: 0;
 
@@ -12,6 +14,10 @@
     animation-delay: 1.0s;
 }
 
+#side-menu{
+    max-height: min-content;
+}
+
 #side-menu li:hover{
     background-color: #747474;
 }
@@ -19,4 +25,10 @@
 #side-menu a{
     text-decoration: none;
     color: #dbdbdb;
+}
+
+@media screen and (max-width:500px) { /*phone*/
+    #side-bar{
+        display: none;
+    }
 }
