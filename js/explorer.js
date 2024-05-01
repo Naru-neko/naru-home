@@ -85,27 +85,26 @@ function bootWindow(url, name){
 }
 
 function toggleSide(){
-    var audios = document.querySelectorAll('.audios');
     if(side_hidden){
         document.getElementById('side-toggle-icon').src = 'images/side-in.png';
-        document.querySelector(`#side-menu`).animate(
+        document.querySelector(`#side-bar`).animate(
             [ { width: 0 }, { width: '13rem' } ],
             { duration: 200, fill: 'forwards'}
         );
-        document.querySelector(`#side-menu`).animate(
+        document.querySelector(`#side-bar`).animate(
             [ { opacity: 0 }, { opacity: 1 } ],
-            { duration: 100, fill: 'forwards', delay: 100}
+            { duration: 100, fill: 'forwards', delay: 50}
         );
         side_hidden = false;
     } else {
         document.getElementById('side-toggle-icon').src = 'images/side-out.png';
-        document.querySelector(`#side-menu`).animate(
+        document.querySelector(`#side-bar`).animate(
             [ { width: '13rem' }, { width: 0 } ],
             { duration: 200, fill: 'forwards'}
         );
-        document.querySelector(`#side-menu`).animate(
+        document.querySelector(`#side-bar`).animate(
             [ { opacity: 1 }, { opacity: 0 } ],
-            { duration: 100, fill: 'forwards', delay: 100}
+            { duration: 100, fill: 'forwards', delay: 50}
         );
         side_hidden = true;
     }
