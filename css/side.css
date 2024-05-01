@@ -1,11 +1,14 @@
+#side-bar::-webkit-scrollbar-track{
+    background-color: #363641;
+}
+
 #side-bar{
-    background-color: #303647;
+    background-color: #22252c;
     width: 13rem;
     min-width: 13rem;
     bottom: 0;
     overflow-y: scroll;
     margin: 0;
-    border-right: solid 2px #93fbff;
     opacity: 0;
 
     animation-name: fadeInAnime;
@@ -13,11 +16,6 @@
     animation-duration: 0.5s;
     animation-timing-function:ease;
     animation-delay: 1.0s;
-}
-
-#side-bar li:hover{
-    background-color: #2c3141;
-    cursor: pointer;
 }
 
 @media screen and (max-width:500px) { /*phone*/

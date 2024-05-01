@@ -1,25 +1,50 @@
 <style>
-    ul{
+    .side-list, .side-list-sub{
         margin: 0;
         margin-top: 1.5rem;
         list-style: none;
         padding: 0;
+        padding-bottom: 1.2rem;
     }
-    .side-list{
-        padding: 1.8rem;
+    .side-list li{
+        font-size: 1.3rem;
+        font-weight: lighter;
         padding-top: 0.8rem;
+        padding-left: 1.8rem;
         padding-bottom: 0.8rem;
+    }
+    .side-list li:hover{
+        background-color: #2c3141;
+    }
+    .side-list-sub{
+        margin: 0;
+        padding: 0;
+    }
+    .side-list-sub li{
+        font-size: 1.1rem;
+        padding-left: 2.5rem;
+        padding-right: 1.3rem;
+    }
+    .category{
+        color: aqua;
     }
     a{
         text-decoration: none;
-        font-size: 1.3rem;
-        font-weight: lighter;
-        color: #dbdbdb;
+        color: #ffffff;
+        cursor: pointer;
     }
 </style>
-<ul>
-    <li class="side-list"><a href="">Home</a></li>
-    <li class="side-list"><a href="">Products</a></li>
-    <li class="side-list"><a href="">Article</a></li>
+<ul class="side-list">
+    <li ><a href="">Home</a></li>
+    <li class="category">Products</li>
+    <ul class="side-list-sub">
+        <li><a href="">DiscordBot</a></li>
+        <li><a href="">Minecraft</a></li>
+        <li><a href="">Product 3</a></li>
+    </ul>
+    <li class="category">Article</li>
+    <ul class="side-list-sub">
+        <li><a href="">Qiita</a></li>
+    </ul>
 
 </ul>

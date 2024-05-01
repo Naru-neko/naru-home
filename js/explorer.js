@@ -27,7 +27,6 @@ function showTime() {
 }
 
 function viewerCloser() {
-    //closeSE();
     document.querySelector(`#viewer-window`).animate(
         [ { height: viewer_height }, { height: '0%' } ],
         { duration: 300, fill: 'forwards' }

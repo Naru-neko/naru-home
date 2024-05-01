@@ -9,6 +9,7 @@ header{
     z-index: 99;
     margin-top: 0;
     padding: 0;
+    height: fit-content;
 
     animation-name: fadeInAnime;
     animation-fill-mode:forwards;
@@ -60,7 +61,7 @@ h2{
 .header-top a, h1, h2{
     text-decoration: none;
     color: #ffffff;
-    font-size: 27px;
+    font-size: 24px;
     font-weight: lighter;
     padding: 1px;
 }
@@ -68,12 +69,17 @@ h2{
 .header-bottom{
     padding-left: 0.5rem;
     padding-right: 1%;
+    padding-bottom: 0.1rem;
     background-color: var(--header-bg-color);
-    border-bottom: solid 2px #93fbff;
+    border-bottom: solid 2px #6a6d7e;
     display: flex;
     justify-content: start;
     align-items: center;
     overflow: hidden;
+}
+
+.header-top, .header-bottom{
+    height: 4vh;
 }
 
 .side-toggle{  
@@ -200,17 +206,25 @@ h2{
     right:100%;
     opacity: 0;
     border-radius: 0.8rem;
-    border: solid 3px #44474e;
+    border: solid 4px #44474e;
     z-index: 1;
     background: rgb(0, 0, 0, 0.85);
+    color: #ffffff;
     transition: .5s;
-    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-  
-#nav_content a {
-    color: #ffffff;
+
+#nav_content .side-list{
+    margin-left: 25px;
+}
+
+#nav_content .side-list li{
+    font-size: 1.4rem;
+}
+
+#nav_content .side-list-sub li{ 
+    font-size: 1.2rem;
 }
 
 #drawer_input:checked ~ #nav_content {
@@ -232,8 +246,15 @@ h2{
     }
 }
 
-@media screen and (min-width:501px) {
+@media screen and (min-width:501px) {/*pc*/
     .drawer_open{
         display: none;
+    } 
+}
+
+@media screen and (min-height:1200px) {/*pc vertical*/
+    .header-top, .header-bottom{
+        height: 2vh;
     }
+
 }
