@@ -101,9 +101,9 @@ h3{
 
 #viewer-window{
     opacity: 0;
-    border-radius: 4px;
+    border-radius: 2px;
     background: rgba(0, 0, 0, 0.822);
-    border: solid 4px rgba(55, 66, 68, 0.95);
+    border: solid 4px rgb(125, 149, 153);
     overflow: hidden;
     z-index: 101;
     width: 0;
@@ -118,8 +118,8 @@ h3{
 }
 
 #viewer-titlebar{
-    background: rgb(50, 55, 63);
-    border-bottom: #888282 solid 1px;
+    background: rgb(90, 98, 109);
+    border-bottom: #aaa3a3 solid 1px;
     height: 29px;
     padding-left: 1%;
     padding-right: 1%;
