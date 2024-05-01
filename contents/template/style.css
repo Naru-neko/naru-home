@@ -1,6 +1,12 @@
 ::-webkit-scrollbar{
     width: 10px;
  }
+ .side ::-webkit-scrollbar{
+    width: 6px;
+ }
+ .side ::-webkit-scrollbar-track{
+    background-color: #7b838f; 
+ }
 ::-webkit-scrollbar-track{
     background-color: #262d38;
  }
@@ -14,9 +20,10 @@ html{
 }
 
  body{
-    background-color: rgba(255, 255, 255, 0.651);
+    background-color: rgb(17, 17, 17);
     height: 100%;
     margin: 0px;
+    color: #ffffff;
  }
  
 #totop{
@@ -28,75 +35,53 @@ html{
 }
 
  .container{
-    margin-top: 50px;
     display: flex;
     justify-content: center;
  }
 
  .contents {
-    background-color: #ffffff;
     height: fit-content;
     width: 48vw;
     margin-right: 2%;
     padding: 4rem;
-    border: solid 0.3rem #969696;
-    border-radius: 1rem;
- }
-
- .title {
-    font-size: 3rem;
-    color: #fff;
-    text-shadow: 0 1px 0 #ccc, 0 3px 0 #ccc, 0 4px 10px rgba(0, 0, 0, .2);
-
  }
 
  h1{
-    padding: 1rem 2rem;
-    color: rgb(75, 234, 255);
-    background: rgb(0, 0, 0);
-    -webkit-box-shadow: 5px 5px 0 #a5a5a5;
-    box-shadow: 5px 5px 0 #464646;
-    border-left: 5px solid #00d9ff;
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 40px;
+    font-size: 250%;
     margin-top: 0;
  }
 
+ #preview-img{
+    width:100%
+ }
+
  h2 {
+    color: #ffffff;
     padding: 10px;
     padding-left: 1rem;
     margin-top: 70px;
     margin-bottom: 25px;
-    border-left: 7px solid #00c3ff;
-    background-color: #f0f0f0;
+    border-left: 7px solid #0cacdd;
     font-size: 26px;
   }
 
 h3{
-    line-height: 45px;
+    line-height: 40px;
+    font-weight: normal;
 }
 
 .side {
-    border-radius: 15px;
-    background-color: #d1d1d1;
+    background-color: #3b3b3b;
     height: fit-content;
     max-height: 75vh;
-    width: 18%;
+    width: 15%;
     padding: 1rem;
     padding-top: 1.3rem;
     position: sticky;
     position: -webkit-sticky;
-    top: 10px;
- }
-
- @media (max-width: 1200px) {
-    .contents{
-        width: 70vw;
-        margin-right: 0;
-    }
-    .side{
-        display: none; 
-    }
+    top: 50px;
  }
 
 .list{
@@ -108,19 +93,14 @@ h3{
     padding-right: 5px;
     margin: 10px;
     list-style: none;
-    font-size: 19px;
+    font-size: 103%;
     line-height: 32px;
 }
 
 .list a{
-    color: rgb(65, 65, 65);
+    color: rgb(255, 255, 255);
 }
-
-.naruneko{
-    margin-top: 60px;
-    width: 90%;
-}
-
+    
 .commandkind{
     border-radius: 10px;
     color: #ffffff;
@@ -141,7 +121,7 @@ h3{
 .command{
     padding-top: 25px;
     font-size: 20px;
-    color: rgb(20, 6, 209);
+    color: rgb(139, 183, 233);
     font-style: italic;
     
 }
@@ -162,15 +142,38 @@ h3{
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 22px;
+    font-weight: bolder;
     padding-left: 15px;
-    background-color: #f1f1f1;
     border-left:  5px solid #fdba02;
     list-style-position: inside;
+    list-style: none;
+}
+
+.type-img{
+    width: 25vw;
+}
+
+.type-describe{
+    width: 43vw;
+}
+
+.type-img, .type-describe{
+    margin-left: 2vw;
 }
 
 footer{
     text-align: center;
     font-size: 1.2rem;
     margin: 2rem;
-    color: cadetblue;
+    color: rgb(71, 71, 71);
 }
+
+@media (max-width: 1200px) {
+    .contents{
+        width: 65vw;
+        margin-right: 0;
+    }
+    .side{
+        display: none; 
+    }
+ }
