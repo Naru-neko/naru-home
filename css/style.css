@@ -2,7 +2,7 @@
     width: 6px;
  }
  ::-webkit-scrollbar-track{
-    background-color: #000000;
+    background-color: #00000000;
  }
  ::-webkit-scrollbar-thumb{
     background-color: #353535;
@@ -15,8 +15,9 @@ html{
 
 body{
     overflow: hidden;
-    background-color: #000000;
+    background-color: #151620;
     height: 100vh;
+    margin: 0;
     font-family: 'Fira Code';
     text-shadow: 0rem 0rem 0.7rem #ffffff;
 }
@@ -102,7 +103,7 @@ h3{
     opacity: 0;
     border-radius: 4px;
     background: rgba(30, 30 , 30, 0.7);
-    border: solid 2px rgba(197, 245, 253, 0.95);
+    border: solid 4px rgba(55, 66, 68, 0.95);
     overflow: hidden;
     z-index: 101;
     width: 0;
@@ -117,7 +118,8 @@ h3{
 }
 
 #viewer-titlebar{
-    background: rgba(0, 0, 0, 0.9);
+    background: rgb(50, 55, 63);
+    border-bottom: #888282 solid 1px;
     height: 29px;
     padding-left: 1%;
     padding-right: 1%;
@@ -151,6 +153,11 @@ hr{
     border-radius: 5%;
     -moz-border-radius: 5%;
     -webkit-border-radius: 5%;
+  }
+
+  #close:hover {
+    background: #ff0000;
+    cursor: pointer;
   }
    
   #close::before, #close::after {

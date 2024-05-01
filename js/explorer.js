@@ -88,6 +88,10 @@ function toggleSide(){
     if(side_hidden){
         document.getElementById('side-toggle-icon').src = 'images/side-in.png';
         document.querySelector(`#side-bar`).animate(
+            [ { minWidth: 0 }, { minWidth: '13rem' } ],
+            { duration: 200, fill: 'forwards'}
+        );
+        document.querySelector(`#side-bar`).animate(
             [ { width: 0 }, { width: '13rem' } ],
             { duration: 200, fill: 'forwards'}
         );
@@ -98,6 +102,10 @@ function toggleSide(){
         side_hidden = false;
     } else {
         document.getElementById('side-toggle-icon').src = 'images/side-out.png';
+        document.querySelector(`#side-bar`).animate(
+            [ { minWidth: '13rem' }, { minWidth: 0 } ],
+            { duration: 200, fill: 'forwards'}
+        );
         document.querySelector(`#side-bar`).animate(
             [ { width: '13rem' }, { width: 0 } ],
             { duration: 200, fill: 'forwards'}

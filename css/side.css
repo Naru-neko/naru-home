@@ -1,5 +1,7 @@
 #side-bar{
+    background-color: #303647;
     width: 13rem;
+    min-width: 13rem;
     bottom: 0;
     overflow-y: scroll;
     margin: 0;
@@ -13,17 +15,9 @@
     animation-delay: 1.0s;
 }
 
-#side-menu{
-    max-height: min-content;
-}
-
-#side-menu li:hover{
-    background-color: #747474;
-}
-
-#side-menu a{
-    text-decoration: none;
-    color: #dbdbdb;
+#side-bar li:hover{
+    background-color: #2c3141;
+    cursor: pointer;
 }
 
 @media screen and (max-width:500px) { /*phone*/
